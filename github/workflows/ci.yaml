@@ -1,0 +1,56 @@
+name: coc-doc
+
+on:
+  push:
+    branches:
+      - main
+
+# Checkout code：获取最新的代码。
+# Set up Docker Buildx：设置Docker Buildx（Docker的一个扩展，支持多平台构建）。
+# Login to Aliyun Docker Registry：登录到阿里云的 Docker 注册中心。
+# Build and push Docker image：构建并推送 Docker 镜像。
+# Executing remote SSH commands：通过 SSH 连接到你的服务器，停止当前容器，移除它，然后运行新的镜像。
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to Aliyun Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cn-shenzhen.aliyuncs.com
+          username: ${{ secrets.ALIYUN_USERNAME }}
+          password: ${{ secrets.ALIYUN_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          build-args: |
+            name=app
+          push: true
+          tags: registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build_and_push
+    steps:
+      - name: Executing remote SSH commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            docker pull registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
+            docker stop app || true
+            docker rm app || true
+            docker run -d --name app registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
