@@ -21,7 +21,6 @@ FROM nginx:1.21.0-alpine
 
 # 从构建阶段复制构建的静态文件到 Nginx 目录
 COPY --from=build /app/build /usr/share/nginx/html
-COPY ./build /usr/share/nginx/html
 
 # 暴露端口 80
 EXPOSE 80
