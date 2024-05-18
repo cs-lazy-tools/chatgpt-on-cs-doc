@@ -1,5 +1,5 @@
 ---
-title: 懒人百宝箱 1.0 发布
+title: 懒人客服 1.0 发布
 authors: [lrhh, farstar, kujoun, peterpan0824, hotsoda, hyuan, bei_shang]
 tags: [lazytools]
 ---

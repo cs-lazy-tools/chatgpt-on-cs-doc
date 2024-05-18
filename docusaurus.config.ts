@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: '懒人百宝箱官方文档',
-  tagline: '懒人百宝箱是一个旨在优化客户服务互动的多功能解决方案。',
+  title: '懒人客服官方文档',
+  tagline: '懒人客服是一个旨在优化客户服务互动的多功能解决方案。',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -70,9 +70,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'https://img.qjwwy.com/articles/1704816941/1704816941878648.png',
     navbar: {
-      title: 'LazyGPT',
+      title: 'ChatGPT-On-CS',
       logo: {
-        alt: 'LazyGPT Logo',
+        alt: 'ChatGPT-On-CS Logo',
         src: 'img/logo.png',
         href: '/',
       },
@@ -90,7 +90,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://chat.lazaytools.top/',
+          href: 'https://github.com/cs-lazy-tools/ChatGPT-On-CS',
           label: '使用',
           position: 'right',
         },
