@@ -11,9 +11,20 @@ sidebar_position: 1
 * [GitHub] https://github.com/cs-lazy-tools/ChatGPT-On-CS
 * [Gitee] https://gitee.com/alsritter/ChatGPT-On-CS (国内用户推荐)
 
+下面视频简单的介绍了一下本项目的主要功能和使用方法，详细的使用方法请查看[文档](/docs/intro.md)。
+
 export const MyIframe = () => (
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1351547477&bvid=BV1qz421Q73S&cid=1464452528&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  <iframe 
+    src="//player.bilibili.com/player.html?isOutside=true&aid=1351547477&bvid=BV1qz421Q73S&cid=1464452528&p=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"
+    style={{ width: '80%', height: '80%' }}
   ></iframe>
+</div>
 );
 
 <MyIframe />
