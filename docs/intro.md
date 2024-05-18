@@ -11,6 +11,13 @@ sidebar_position: 1
 * [GitHub] https://github.com/cs-lazy-tools/ChatGPT-On-CS
 * [Gitee] https://gitee.com/alsritter/ChatGPT-On-CS (国内用户推荐)
 
+export const MyIframe = () => (
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1351547477&bvid=BV1qz421Q73S&cid=1464452528&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  ></iframe>
+);
+
+<MyIframe />
+
 ## 主要功能
 - [x] 多平台支持，并且未来将不断扩展支持更多社交媒体平台.
 - [x] 预设回复内容：允许用户设置自定义回复，以应对常见问题，提高回复效率.
