@@ -51,6 +51,6 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             docker pull registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
-            docker stop app || true
-            docker rm app || true
-            docker run -p 36780:80 -d --name app registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
+            docker stop coc-doc || true
+            docker rm coc-doc || true
+            docker run -p 36780:80 -d --name coc-doc registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
