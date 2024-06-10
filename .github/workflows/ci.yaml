@@ -53,4 +53,4 @@ jobs:
             docker pull registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
             docker stop coc-doc || true
             docker rm coc-doc || true
-            docker run -p 36780:80 -d --name coc-doc registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
+            docker run -p 33781:80 -d --name coc-doc registry.cn-shenzhen.aliyuncs.com/qjwwy-pro/coc-doc:self-${{ github.ref_name }}-${{ github.run_number }}
