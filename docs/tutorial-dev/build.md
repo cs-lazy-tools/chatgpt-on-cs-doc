@@ -11,21 +11,22 @@ sidebar_position: 1
 ## 安装 Backend 文件
 这里暂时不提供独立的 backend 服务，你可以安装懒人百宝箱后，将 assets/backend 目录下的文件解压到你的项目目录 assets/backend 目录下
 
-然后修改
+然后修改下面这个文件的
 
 ```
-src\renderer\services\analytics\index_template.ts
+src\main\system\backend.ts
 ```
 
-文件为：
+把这块内容注释掉
 
-
+```js
+if (process.env.NODE_ENV === 'development') {
+  this.port = 9999;
+  return;
+}
 ```
-src\renderer\services\analytics\index.ts
-```
 
-然后自己根据这个文件的注释调整下依赖
-
+然后启动时会使用本地的 backend 服务，然后为它分配一个端口，以便启动服务
 
 ## 安装依赖
 确定本地 Nodejs 环境没有问题后
@@ -82,12 +83,6 @@ npm i
 ```
 
 
-
-
-
-
-
-
 ## 构建 Electron 的 Sqlite3
 注意 Electron 有个 Sqlite3 的坑，需要重新编译，可以参考以下命令
 
@@ -128,3 +123,6 @@ node-gyp rebuild --target=26.2.1 --arch=x64 --target_platform=win32 --dist-url=h
 pnpm i -D electron-builder
 pnpm run postinstall
 ```
+
+注意，关于这个依赖是有比较多的问题，建议自己去搜索一下，这里只是提供一个参考，不能保证每个人的环境都能打包成功
+
