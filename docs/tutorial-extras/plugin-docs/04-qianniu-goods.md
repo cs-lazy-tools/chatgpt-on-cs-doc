@@ -10,6 +10,10 @@ cover: https://image.alsritter.icu/img/202203022251008.jpg
 ## 千牛商品识别
 千牛可以携带商品信息，插件可以通过 `ctx.get('CTX_CURRENT_GOODS_ID')` 获取当前商品 ID
 
+添加 `COC_DEBUG_BUSINESS_ENV` 到系统环境变量，值为 `true`，才能开启商品识别功能。
+
+![alt text](image.png)
+
 ```js
 const cc = require('config_srv');
 const rp = require('reply_srv');
