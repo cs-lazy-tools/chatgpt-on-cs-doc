@@ -30,6 +30,11 @@ sidebar_position: 5
 
 ![alt text](./docs/qianniu_settings_1.png)
 
+再设置为气泡模式
+
+![alt text](image-9.png)
+
+
 然后重启千牛，并在登录时选择多店铺模式进入
 
 ![alt text](./docs/qianniu_settings_2.png)

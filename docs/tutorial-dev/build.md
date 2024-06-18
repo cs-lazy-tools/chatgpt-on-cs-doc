@@ -31,6 +31,12 @@ if (process.env.NODE_ENV === 'development') {
 ## 安装依赖
 确定本地 Nodejs 环境没有问题后
 
+先到 `package.json` 文件中删掉这行
+
+```json
+"postinstall": "ts-node .erb/scripts/check-native-dep.js && electron-builder install-app-deps && pnpm run build:dll",
+```
+
 然后运行以下命令，安装依赖
 
 ```bash
@@ -44,6 +50,9 @@ cd release/app
 # 因为下面会用到 node-gyp 编译，如果使用 pnpm 安装会导致编译时 link 出现问题
 npm i
 ```
+
+然后把上面的 `postinstall` 行加回去，然后运行以下命令，安装依赖，这是因为 pnpm 会干扰到 npm 的包管理
+
 
 就可以使用 vscode 的 Debug 模式启动项目
 
