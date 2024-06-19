@@ -29,6 +29,13 @@ const config: Config = {
     locales: ['en', 'zh-Hans'],
   },
   plugins: [],
+  scripts: [
+    {
+      src: 'https://anl.wizgadg.top/script.js',
+      defer: true,
+      'data-website-id': '3a8cbd70-3f91-48b7-9435-440517e968bf',
+    },
+  ],
   presets: [
     [
       'classic',
