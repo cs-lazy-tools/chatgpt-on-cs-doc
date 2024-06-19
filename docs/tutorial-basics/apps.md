@@ -25,6 +25,8 @@ sidebar_position: 5
 
 ![alt text](image-3.png)
 
+如果老是启动浏览器失败，可以尝试更新一下 Chrome 浏览器，有可能是版本太旧了
+
 ## 千牛设置
 首先到设置里面打开讲述人模式
 
@@ -34,13 +36,13 @@ sidebar_position: 5
 
 ![alt text](image-9.png)
 
-
-然后重启千牛，并在登录时选择多店铺模式进入
-
-![alt text](./docs/qianniu_settings_2.png)
-
 然后记得关闭千牛的自动回复功能，否则会影响 ChatGPT 的回复
 
+![alt text](de7ac4b6-8d29-49e2-a189-d60a58ddf37b.png)
+
+最后重启千牛，并在登录时选择多店铺模式进入
+
+![alt text](./docs/qianniu_settings_2.png)
 
 ## 自动暂停设置
 有时候我们需要暂停软件，可以在右边的面板中点击 “暂停软件” 按钮，然后软件就会暂停了
