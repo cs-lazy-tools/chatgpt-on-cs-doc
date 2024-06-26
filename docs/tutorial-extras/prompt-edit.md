@@ -23,7 +23,7 @@ LLM（Large Language Model，大型语言模型）的Prompt是对模型的一种
 
 CoT 的全称即 chain-of-thought（思维链）。该方法用一句话表述就是：将思考和推理的过程也教给模型，帮助模型提高其推理能力。下面使用例子具体描述该方法的操作细节。
 
-![](https://image.alsritter.icu/img202312072350679.png)
+![](https://image.quicktoolset.top/img202312072350679.png)
 
 上图1中的左侧部分是标准提示的方法。在 "Model Input" 中第一组 QA 是给模型的样例，在该样例中直接给出了答案是 11，并没有给出这个答案是如何得到的。对应的中文如下：
 
@@ -51,7 +51,7 @@ A: Roger 最初有 5 个球。2 罐网球，每罐 3 个，共 6 个网球。5+6
 
 上一部分的 CoT 方法需要至少给出一个例子，也就是 few-shot 方法，然后就又提出了一种 zero-shot 的思维链方法，下面结合具体例子进行说明。
 
-![](https://image.alsritter.icu/img202312072358631.png)
+![](https://image.quicktoolset.top/img202312072358631.png)
 
 原来是给定 question，让模型直接输出 answer。而 zero-shot 思维链方法则将该过程拆分为两步。
 
@@ -100,7 +100,7 @@ A: 让我们一步一步地思考。
 
 该方法在数学推理测试集GSM8K上，将指标提升到了74.4%左右。
 
-![](https://image.alsritter.icu/img202312080005424.png)
+![](https://image.quicktoolset.top/img202312080005424.png)
 
 
 ## Least-to-Most（分而治之）
@@ -108,7 +108,7 @@ A: 让我们一步一步地思考。
 
 原论文中该方法名字为 Least-to-Most Prompting，然后其思想非常像是分治思想，就是把大问题拆分成小问题，先解决小问题，后解决大问题。以下图4中的例子进行说明。
 
-![](https://image.alsritter.icu/img202312080006200.png)
+![](https://image.quicktoolset.top/img202312080006200.png)
 
 如上图4中所示，背景描述为："Amy 爬到滑梯顶端需要4分钟。她需要1分钟才能滑下来。水滑梯将在15分钟后关闭"，原始的问题为："How many times can she slide before it closes?"（在关闭之前她可以滑动多少次）
 

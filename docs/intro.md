@@ -4,9 +4,7 @@ sidebar_position: 1
 ---
 
 # 懒人客服是什么？
-本项目是基于大模型的智能对话客服工具，支持多平台接入，可选择 GPT3.5/GPT4.0（后续会支持更多平台），能处理文本、语音和图片，通过插件访问操作系统和互联网等外部资源，支持基于自有知识库定制企业 AI 应用.
-
-注：本项目只是一个用于对接外部平台的客服工具，不提供任何平台的账号，需要自行准备。并且知识库功能也需要自行准备，该项目目前只支持的 OpenAI 的 API 接口（或代理）接入
+本项目是基于大模型的智能对话客服工具，支持多平台接入，可选择 GPT3.5/GPT4.0/[懒人百宝箱](https://chat.lazaytools.top/)/FastGPT/DifyAI/通义千问/文心一言 等平台大模型，能处理文本、语音和图片，通过插件访问操作系统和互联网等外部资源，支持基于自有知识库定制企业 AI 应用.
 
 * [GitHub] https://github.com/cs-lazy-tools/ChatGPT-On-CS
 * [Gitee] https://gitee.com/alsritter/ChatGPT-On-CS (国内用户推荐)

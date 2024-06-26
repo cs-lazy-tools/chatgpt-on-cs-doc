@@ -4,7 +4,7 @@ date: 2024-01-18 11:23:59
 tags: []
 categories: []
 updated: 2024-01-18 11:23:59
-cover: https://image.alsritter.icu/img/202203022250694.jpg
+cover: https://image.quicktoolset.top/img/202203022250694.jpg
 ---
 
 # 内置的模块
